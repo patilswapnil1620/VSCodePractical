@@ -5,9 +5,11 @@ public class AccountDeletionHandler {
             accIds.add(acc.Id);
         }
         Map<Id,Account> mapAcc = new Map<Id,Account>([SELECT Id,(SELECT Id FROM Contacts) FROM Account WHERE Id IN :accIds]);
-        for(Account a:oldList){
+        for(Account a:oldList){// jjjj
             if(mapAcc.get(a.Id).Contacts.size()>2){
                 a.addError('can not be delete the account');
+
+                //ssssssssssssssssssssssssssssssssssssssssssssssssssssssss
             }
         }
     }
