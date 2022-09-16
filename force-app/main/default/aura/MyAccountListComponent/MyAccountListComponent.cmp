@@ -1,0 +1,20 @@
+<aura:component controller="MyAccountListController" implements="flexipage:availableForAllPageTypes" access="global" >
+    <aura:attribute name="lstAccount" type="Account[]"/>
+     <aura:attribute name="columnsToDisplay" type="List"/>
+     <aura:attribute name="searchKeyword" type="string"/>
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+ <lightning:card title="Account List" iconName="standard:account">
+     <lightning:layout>
+         <lightning:layoutItem size="3" padding="around-small">
+             <lightning:input aura:id="searchField"  label="Account Name" placeholder="search account" value="{!v.searchKeyword}" onChange="{!c.searchAccounts}"/>
+         
+         </lightning:layoutItem>
+     </lightning:layout>
+      <lightning:datatable
+                keyField="id"
+                data="{! v.lstAccount}"
+                columns="{! v.columnsToDisplay}"
+                hideCheckboxColumn="true"/>
+     
+    </lightning:card>
+</aura:component>

@@ -1,0 +1,5 @@
+<aura:component >
+	<div>
+        <input type="text" class="form-control" Placeholder="Search..." onkeyup="{c.searchkeychange}"/>
+    </div>
+</aura:component>

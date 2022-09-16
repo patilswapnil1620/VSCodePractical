@@ -1,0 +1,13 @@
+<aura:component>
+    <aura:attribute name="accList" type="List"/>
+    <aura:handler  event="c:AccountListDisplay" action="{!c.reLoadData}"/>
+    <aura:iteration items="{!v.accList}" var="acc">
+        <lightning:card footer="" title="Hello">
+            
+            <p class="slds-p-horizontal_small">
+                {!acc.Name} 
+            </p>
+        </lightning:card>
+        
+    </aura:iteration>
+</aura:component>

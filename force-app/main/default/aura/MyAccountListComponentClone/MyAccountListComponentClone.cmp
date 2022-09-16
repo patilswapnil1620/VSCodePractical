@@ -1,0 +1,23 @@
+<aura:component controller="MyAccountListController">
+    <aura:attribute name="searchKeyword" type="string"/>
+    <aura:attribute name="lstAccount" type="List"/>
+    <aura:attribute name="columns" type="List"/>
+    <aura:registerEvent name="accountListDisplay" type="c:AccountListDisplay"/>
+    
+    <lightning:input aura:id="searchField"  
+                     label="Account Name" 
+                     placeholder="search account"
+                     value="{!v.searchKeyword}"
+                     onchange="{!c.searchAccounts}"/>
+    
+    
+    
+  <!--  <lightning:datatable
+                         keyField="id"
+                         data="{! v.lstAccount }"
+                         columns="{! v.columns }"
+                         hideCheckboxColumn="true"/> -->
+    
+    
+    
+</aura:component>

@@ -1,0 +1,10 @@
+<aura:component >
+    <aura:attribute name="message" type="string"/>
+     <aura:handler name="ComponentEventExample" event="c:ComponentEventExample" action="{!c.getValuesFromChild}"/>
+    <lightning:card  title="Parent Component">
+        message from child component---{!v.message} <br/>
+        I am in my parent component
+        <c:ChildComponent/>
+       
+    </lightning:card>
+</aura:component>
