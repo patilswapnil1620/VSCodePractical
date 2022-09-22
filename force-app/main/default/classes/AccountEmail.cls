@@ -7,5 +7,6 @@ public class AccountEmail {
     public static list<Account> findByName(string searchkey){
         string name ='%' + searchkey +'%';
         return [Select id,Name from Account where Name Like:name limit 50];
+        // ssssssssssssssssssss
     }
 }
