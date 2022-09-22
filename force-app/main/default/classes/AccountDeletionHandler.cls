@@ -10,6 +10,7 @@ public class AccountDeletionHandler {
                 a.addError('can not be delete the account');
 
                 //swap swap swap swap swap swap
+                // commented for gitconflict 2
             }
         }
     }
